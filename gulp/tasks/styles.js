@@ -1,14 +1,14 @@
-let plumber = require('gulp-plumber'),
-    scss = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    csso = require('gulp-csso'),
-    csscomb = require('gulp-csscomb'),
-    sourcemaps = require('gulp-sourcemaps'),
-    rename = require('gulp-rename'),
-    stylesPATH = {
-        "input": "./dev/static/styles/",
-        "ouput": "./build/static/css/"
-    };
+const plumber = require('gulp-plumber'),
+      scss = require('gulp-sass'),
+      autoprefixer = require('gulp-autoprefixer'),
+      csso = require('gulp-csso'),
+      csscomb = require('gulp-csscomb'),
+      sourcemaps = require('gulp-sourcemaps'),
+      rename = require('gulp-rename'),
+      stylesPATH = {
+          "input": "./dev/static/styles/",
+          "ouput": "./build/static/css/"
+      };
 
 module.exports = function () {
     $.gulp.task('styles:dev', () => {

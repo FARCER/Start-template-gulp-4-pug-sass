@@ -1,7 +1,4 @@
-mixin icon(name,mod)
-	if(mod)
-		svg(class="svg-sprite-icon icon-" + name + ' ' + mod)
-			use(xlink:href="static/images/svg/symbol/sprite.svg#" + name)
-	else
-		svg(class="svg-sprite-icon icon-" + name)
-			use(xlink:href="static/images/svg/symbol/sprite.svg#" + name)
+include ../../ui-kit/ui-btn/ui-btn
+include ../../ui-kit/ui-pagination/ui-pagination
+include ../../ui-kit/ui-svg-icon/ui-svg-icon
+

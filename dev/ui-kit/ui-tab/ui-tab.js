@@ -4,12 +4,12 @@ let tab = function () {
         tabName; // Переменная для имени таба
 
     // Проходим циклом по каждому элементу навигации и навешиваем обработчик клика, который вызывает функцию selectTabNav
-    tabNav.forEach(function (item) {
+    tabNav.forEach((item) => {
         item.addEventListener('click', selectTabNav)
     });
 
     function selectTabNav() {
-        tabNav.forEach(function (item) {
+        tabNav.forEach((item) => {
             // Удаляем активный класс у всех элементов навигации табов
             item.classList.remove('is-active');
         });
@@ -20,12 +20,9 @@ let tab = function () {
 
     function selectTabContent(tab) {
         // Проходим по всем табам и проверяем есть ли у элемента класс, равный имени таба(переменной tabName). Если есть, то добавляем класс активного таба, если нет, то удаляем этот класс
-        tabContent.forEach(function (item) {
-            if (item.classList.contains(tab)) {
-                item.classList.add('is-active');
-            } else {
-                item.classList.remove('is-active');
-            }
+        tabContent.forEach((item) => {
+            let classList = item.classList;
+            classList.contains(tab) ? classList.add('is-active') : classList.remove('is-active');
         });
     }
 };

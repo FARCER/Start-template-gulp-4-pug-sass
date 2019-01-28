@@ -1,0 +1,34 @@
+mixin pagination(mods)
+	-
+		var allMods = '';
+		if(typeof(mods) !== 'undefined' && mods) {
+			var modsList = mods.split(',');
+		for (var i = 0; i < modsList.length; i++) {
+			allMods = allMods + ' pagination--' + modsList[i].trim();
+			}
+		}
+
+	.pagination(class=allMods)&attributes(attributes)
+		ul.pagination__list
+			block
+
+
+mixin pagination-item(text, href, active, mods)
+	-
+		var allMods = '';
+		if(typeof(mods) !== 'undefined' && mods) {
+			var modsList = mods.split(',');
+		for (var i = 0; i < modsList.length; i++) {
+			allMods = allMods + ' pagination__item--' + modsList[i].trim();
+			}
+		}
+		if(typeof(active) !== 'undefined' && active) {
+			allMods = allMods + ' pagination__item--active';
+		}
+
+	if(typeof(href) !== 'undefined' && href)
+		li.pagination__item(class=allMods, href=href)&attributes(attributes)
+			a.pagination__link= text
+	else
+		li.pagination__item(class=allMods)&attributes(attributes)
+			span.pagination__text= text

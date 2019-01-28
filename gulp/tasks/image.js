@@ -1,12 +1,12 @@
-let imagemin = require('gulp-imagemin'),
-    imageminJpegRecompress = require('imagemin-jpeg-recompress'),
-    pngquant = require('imagemin-pngquant'),
-    cache = require('gulp-cache'),
-    imgPATH = {
+const imagemin = require('gulp-imagemin'),
+      imageminJpegRecompress = require('imagemin-jpeg-recompress'),
+      pngquant = require('imagemin-pngquant'),
+      cache = require('gulp-cache'),
+      imgPATH = {
         "input": ["./dev/static/images/**/*.{png,jpg,gif,svg}",
             '!./dev/static/images/svg/*'],
         "ouput": "./build/static/images/"
-    };
+      };
 
 module.exports = function () {
     $.gulp.task('img:dev', () => {

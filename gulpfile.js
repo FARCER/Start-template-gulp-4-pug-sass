@@ -31,6 +31,20 @@ $.gulp.task('build', $.gulp.series(
     $.gulp.parallel(
         'pug',
         'fonts',
+        'styles:build',
+        'img:build',
+        'libsJS:build',
+        'js:build',
+        'svg'
+    )
+));
+
+
+$.gulp.task('build-min', $.gulp.series(
+    'clean',
+    $.gulp.parallel(
+        'pug',
+        'fonts',
         'styles:build-min',
         'img:build',
         'libsJS:build',
@@ -38,6 +52,7 @@ $.gulp.task('build', $.gulp.series(
         'svg'
     )
 ));
+
 $.gulp.task('default', $.gulp.series(
     'dev',
     $.gulp.parallel(
