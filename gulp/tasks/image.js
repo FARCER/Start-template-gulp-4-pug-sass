@@ -5,13 +5,13 @@ const imagemin = require('gulp-imagemin'),
     imgPATH = {
         "input": ["./dev/static/images/**/*.{png,jpg,gif,svg}",
             '!./dev/static/images/svg/*'],
-        "ouput": "./build/static/images/"
+        "output": "./build/static/images/"
     };
 
 module.exports = function () {
     $.gulp.task('img:dev', () => {
         return $.gulp.src(imgPATH.input)
-            .pipe($.gulp.dest(imgPATH.ouput));
+            .pipe($.gulp.dest(imgPATH.output));
     });
 
     $.gulp.task('img:build', () => {
@@ -31,6 +31,6 @@ module.exports = function () {
             ], {
                 verbose: true
             })))
-            .pipe($.gulp.dest(imgPATH.ouput));
+            .pipe($.gulp.dest(imgPATH.output));
     });
 };
