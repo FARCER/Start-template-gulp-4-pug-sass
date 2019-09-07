@@ -39,3 +39,11 @@ if ('NodeList' in window && !NodeList.prototype.forEach) {
             Element.prototype.msMatchesSelector;
     }
 })();
+
+//Array.form IE 11
+if (!Array.from) {
+    Array.from = function (object) {
+        'use strict';
+        return [].slice.call(object);
+    };
+}
