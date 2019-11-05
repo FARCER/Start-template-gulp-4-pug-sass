@@ -28,7 +28,8 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svg-sprite": "^1.4.0",
     "gulp-svgmin": "^2.1.0",
-    "gulp-uglify": "^3.0.1"
+    "gulp-uglify": "^3.0.1",
+    "imagemin-jpeg-recompress": "^6.0.0"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",

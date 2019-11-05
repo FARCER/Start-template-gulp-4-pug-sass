@@ -1,4 +1,4 @@
-let tab = function () {
+const tab = function () {
     let tabNav = document.querySelectorAll('.tabs-nav__item'), // Выбираем элементы навигации табов
         tabContent = document.querySelectorAll('.tabs-content__item'), // Выбираем самы табы
         tabName; // Переменная для имени таба
