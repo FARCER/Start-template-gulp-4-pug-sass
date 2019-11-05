@@ -27,18 +27,14 @@ module.exports = function () {
     $.gulp.task('styles:build', () => {
         return $.gulp.src(stylesPATH.input + 'styles.scss')
             .pipe(scss())
-            .pipe(autoprefixer({
-                 overrideBrowserslist:  ['last 3 versions']
-            }))
+            .pipe(autoprefixer())
             .pipe(csscomb())
             .pipe($.gulp.dest(stylesPATH.output))
     });
     $.gulp.task('styles:build-min', () => {
         return $.gulp.src(stylesPATH.input + 'styles.scss')
             .pipe(scss())
-            .pipe(autoprefixer({
-                 overrideBrowserslist:  ['last 3 versions']
-            }))
+            .pipe(autoprefixer())
             .pipe(csscomb())
             .pipe(csso())
             .pipe(rename('styles.min.css'))
