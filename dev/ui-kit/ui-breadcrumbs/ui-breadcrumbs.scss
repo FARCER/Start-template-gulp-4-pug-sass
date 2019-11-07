@@ -1,0 +1,11 @@
+.breadcrumbs {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    & > * {
+        &:not(:last-child) { margin-right: 10px; }
+    }
+    &__item {
+        white-space: nowrap;
+    }
+}

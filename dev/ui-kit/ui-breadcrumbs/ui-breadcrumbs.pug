@@ -1,0 +1,10 @@
+mixin breadcrumbs-item(text,href)
+	li.breadcrumbs__item
+		if(href)
+			a.breadcrumbs__link(href=href)=text
+		else
+			span.breadcrumbs__text=text
+
+ul.breadcrumbs
+	+breadcrumbs-item('Home','#')
+	+breadcrumbs-item('Home')

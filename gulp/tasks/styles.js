@@ -1,14 +1,14 @@
-let plumber = require('gulp-plumber'),
-    scss = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    csso = require('gulp-csso'),
-    csscomb = require('gulp-csscomb'),
-    sourcemaps = require('gulp-sourcemaps'),
-    rename = require('gulp-rename'),
-    stylesPATH = {
-        "input": "./dev/static/styles/",
-        "output": "./build/static/css/"
-    };
+const plumber = require('gulp-plumber'),
+      scss = require('gulp-sass'),
+      autoprefixer = require('gulp-autoprefixer'),
+      csso = require('gulp-csso'),
+      csscomb = require('gulp-csscomb'),
+      sourcemaps = require('gulp-sourcemaps'),
+      rename = require('gulp-rename'),
+      stylesPATH = {
+          "input": "./dev/static/styles/",
+          "output": "./build/static/css/"
+      };
 
 module.exports = function () {
     $.gulp.task('styles:dev', () => {
@@ -27,6 +27,9 @@ module.exports = function () {
     $.gulp.task('styles:build', () => {
         return $.gulp.src(stylesPATH.input + 'styles.scss')
             .pipe(scss())
+            .pipe(autoprefixer({
+                 overrideBrowserslist:  ['last 3 versions']
+            }))
             .pipe(autoprefixer())
             .pipe(csscomb())
             .pipe($.gulp.dest(stylesPATH.output))

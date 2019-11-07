@@ -1,0 +1,19 @@
+.select {
+    position: relative;
+    &.is-open {
+        .select__body { display: block; }
+    }
+    &__header {
+        cursor: pointer;
+    }
+    &__body {
+        display: none;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+    &__item {
+        cursor: pointer;
+    }
+}

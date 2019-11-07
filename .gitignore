@@ -1,5 +1,6 @@
 .DS_store
+package-lock.json
+node_modules
 .idea
 build
-node_modules
 /*.exe.stackdump
