@@ -1,4 +1,4 @@
-let plumber = require('gulp-plumber'),
+const plumber = require('gulp-plumber'),
     pug = require('gulp-pug'),
     cached = require('gulp-cached');
 
